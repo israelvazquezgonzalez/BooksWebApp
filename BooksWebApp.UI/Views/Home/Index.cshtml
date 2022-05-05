@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div class="card">
+        <div class="card-body bg-light text-center">
+            <div class="row">
+                <div class="col">
+                    <form id="search-form" class="form-inline">
+                        <label>Search by Title, Author or Description</label>
+                        <input type="text" class="form-control-lg mr-sm-2" name="searchQuery" placeholder="Search..." aria-label="Search" />
+                        <button type="submit" class="btn-lg btn-primary my-2 my-sm-0">Search</button>
+                        <small class="text-danger error-search-empty errors">Search field cannot be empty</small>
+                    </form>
+                </div>
+                <div class="col text-right">
+                    <div class="dropdown">
+                        <button class="btn-lg btn-outline dropdown-toggle mt-4" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sort Book List
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item sort desc" data-type="title" href="#">Sort by Title</a>
+                            <a class="dropdown-item sort desc" data-type="date" href="#">Sort by Published Date</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col">
+        <h3 class="mb-0">
+            Books on File
+        </h3>
+    </div>
+</div>
+<hr />
+
+<div id="books-details">
+    @*@Html.Partial("_BooksDetails", Model)*@
+</div>
+
+<div id="sucessModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-success success"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>
