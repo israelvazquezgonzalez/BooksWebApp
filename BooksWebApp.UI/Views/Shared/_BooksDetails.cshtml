@@ -1,0 +1,141 @@
+﻿@model List<VolumenModel>
+
+    @{
+    var bookCount = @Model.Count();
+    }
+
+    @if (bookCount == 0)
+    {
+    <div id="no-results">
+        <div class="row">
+            <div class="col text-center">
+                <div class="bubble-container">
+                    <div class="bubble">Sorry there are no books match that word. I promise I tried hard, just like Robert taught me. Please try something else.</div>
+                </div>
+                <img src="~/lib/images/sorry.jpg" width="250" />
+            </div>
+        </div>
+        <hr />
+    </div>
+    }
+    else
+    {
+    <div id="search-results">
+        <div class="row">
+            <div class="col">
+                <p class="mb-0">
+                    @bookCount book(s) matching the query "<span class="text-info"></span>
+                </p>
+            </div>
+        </div>
+        <hr />
+    </div>
+
+    @*@foreach (var volumen in Model)
+    {
+    var dateTimeDate = DateTime.Parse(volumen.Published);
+    var editOrWriteReview = b.Reviews == string.Empty ? "Write Review" : "Edit Review";
+
+    <div class="row">
+        <div class="col-2">
+            <img src="https://specials-images.forbesimg.com/imageserve/5f85be4ed0acaafe77436710/960x0.jpg?fit=scale" width="150" class="img-fluid" />
+        </div>
+        <div class="col-8">
+            <div>
+                <h3 class="mb-1">
+                    @b.Title<span class="raiting">
+                        @for (int i = 1, count = 6; i < count; i++)
+                        {
+                        if (i <= b.Stars)
+                        {
+                        <a href="#" class="star-link">
+                            <img src="~/lib/images/star.svg" width="15" class="star align-baseline" data-id="@i" data-isbn="@b.Isbn" />
+                        </a>
+                        }
+                        else
+                        {
+                        <a href="#" class="star-link">
+                            <img src="~/lib/images/star-empty.svg" width="15" class="star align-baseline" data-id="@i" data-isbn="@b.Isbn" />
+                        </a>
+                        }
+                        }
+
+                    </span>
+                </h3>
+                <h4 class="text-black-50 mb-0">@b.SubTitle</h4>
+                <p class="mb-0">by <a href="/" class="btn btn-link p-0 align-baseline">@b.Author</a></p>
+                <small>ISBN: <span class="isbn-number">@b.Isbn</span></small>
+            </div>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-outline-dark btn-block" data-toggle="collapse" data-target="#description-@b.Isbn">More Details</button>
+            <button class="btn btn-outline-dark btn-block" data-toggle="collapse" data-target="#review-@b.Isbn">@editOrWriteReview</button>
+        </div>
+        <div class="col-12">
+            <div id="description-@b.Isbn" class="collapse">
+                <table class="table table-sm mt-3">
+                    <thead>
+                        <tr>
+                            <th>
+                                Pages
+                            </th>
+                            <th>
+                                Website
+                            </th>
+                            <th>
+                                Publisher
+                            </th>
+                            <th>
+                                Published
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@b.Pages</td>
+                            <td><a href="@b.Website" class="btn btn-link p-0 align-baseline">@b.Website</a></td>
+                            <td><a href="/" class="btn btn-link p-0 align-baseline">@b.Publisher</a></td>
+                            <td>@dateTimeDate.ToString("MM/dd/yyyy")</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card bg-light">
+                    <div class="card-text px-4 py-3">
+                        <p>@b.Description</p>
+                    </div>
+                </div>
+                @if (b.Reviews != string.Empty)
+                {
+                <br />
+                <div class="card bg-light">
+                    <div class="card-text px-4 py-3">
+                        <p>@b.Reviews</p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        <div class="col-12">
+            <div id="review-@b.Isbn" class="collapse">
+                <form class="write-review-form">
+                    <div class="form-group">
+                        <label>Write a Review</label>
+                        <textarea class="review-textarea form-control" name="reviewText">@b.Reviews</textarea>
+                        <input type="hidden" name="isbn" value="@b.Isbn" />
+                    </div>
+                    <button class="btn btn-secondary" type="submit">Submit Review</button>
+                    <small class="text-danger error-review-empty errors">Search field cannot be empty</small>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr class="my-3" />
+    }
+
+
+
+
+    }*@
+
+
+

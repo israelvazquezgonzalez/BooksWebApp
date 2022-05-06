@@ -1,4 +1,5 @@
-﻿using BooksWebApp.UI.Models;
+﻿using BooksWebApp.UI.DataAccess;
+using BooksWebApp.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -20,7 +21,9 @@ namespace BooksWebApp.UI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var volumen = BooksAccess.Search("mockingbird").Result;
+
+            return View(volumen);
         }
 
         public IActionResult Privacy()
