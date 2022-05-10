@@ -16,21 +16,20 @@ Any other feature that might be useful to the user
 #### Resources
 Google Books API can be used
 
-
 ## Approach 
 The approach I took was to build a clean, easy-to-use, search centric web application that will be usable on desktop and mobile.
 
 #### Solution
-The solution for this assignment I built was leveraging a MVC Web Application using .NET Core 6, JQuery/Javascript/Ajax, HTML, Bootstrap 5 and CSS3.
+The Web Application for this assignment I built leveraging the MVC architecture using .NET Core 6, JQuery/Javascript/Ajax, HTML, Bootstrap 5 and CSS.
 
 #### Reasoning behind technical choices
 I chose .NET Core 6 as they made performance improvements. Secondlly the size of the application, my experience working with them and the quick turnaround was the reason why I went with JQuery/Javascript/Ajax and Bootstrap 5.
 
-#### Trade-offs
+#### Trade-offs, left out or might do different
 Time was definitely a factor, two glaring elements I left behind were, pagination and sorting. Code refactoring, error handling, security —I implemented IAntiforgery but was not able to test it— and testing were some of the other things I did not have the time to implement. Web and UX design is also one of the other aspects I would have liked to spend more time in, transitions, spacing and another way to list the book search results.
 
-#### Optional features
-Creating the graphics, the loading animation keyframe by keyframe as well as the visual aspects of the overall application and UX was something I considered optional features.
+#### Any optional features
+Creating the graphics, the loading animation keyframe by keyframe as well as the visual aspects of the overall application and UX was something I put extra effort into.
 
 
 ### Instruction to Run the Application
