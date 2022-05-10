@@ -21,7 +21,7 @@ Google Books API can be used
 The approach I took was to build a clean, easy-to-use, search centric web application that will be usable on desktop and mobile.
 
 #### Solution
-The solution for this assignment I built was leveraging .NET Core 6, JQuery/Javascript/Ajax, HTML, Bootstrap 5 and CSS3.
+The solution for this assignment I built was leveraging a MVC Web Application using .NET Core 6, JQuery/Javascript/Ajax, HTML, Bootstrap 5 and CSS3.
 
 #### Reasoning behind technical choices
 I chose .NET Core 6 as they made performance improvements. Secondlly the size of the application, my experience working with them and the quick turnaround was the reason why I went with JQuery/Javascript/Ajax and Bootstrap 5.
