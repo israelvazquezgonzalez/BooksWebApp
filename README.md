@@ -27,7 +27,7 @@ The solution for this assignment I built was leveraging a MVC Web Application us
 I chose .NET Core 6 as they made performance improvements. Secondlly the size of the application, my experience working with them and the quick turnaround was the reason why I went with JQuery/Javascript/Ajax and Bootstrap 5.
 
 #### Trade-offs
-Time was definitely a factor, two glaring elements I left behind were, pagination and sorting. Code refactoring, validation, security —I implemented IAntiforgery but was not able to test it— and testing were some of the other things I would have liked to finish but did not have the time to implement. 
+Time was definitely a factor, two glaring elements I left behind were, pagination and sorting. Code refactoring, error handling, security —I implemented IAntiforgery but was not able to test it— and testing were some of the other things I did not have the time to implement. Web and UX design is also one of the other aspects I would have liked to spend more time in, transitions, spacing and another way to list the book search results.
 
 #### Optional features
 Creating the graphics, the loading animation keyframe by keyframe as well as the visual aspects of the overall application and UX was something I considered optional features.
